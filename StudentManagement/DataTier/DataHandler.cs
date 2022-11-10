@@ -8,7 +8,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StudentManagement.DataTier
+namespace StudentManagement
 {
     class DataHandler
     {
@@ -256,9 +256,9 @@ namespace StudentManagement.DataTier
 
                 Debug.WriteLine("Update successful");
             }
-            catch (Exception error)
+            catch (Exception e)
             {
-                Console.WriteLine("Update Error: " + error.Message);
+                Console.WriteLine("Update Error: " + e.Message);
             }
             finally
             {
@@ -297,9 +297,9 @@ namespace StudentManagement.DataTier
 
                 Debug.WriteLine("Update successful");
             }
-            catch (Exception error)
+            catch (Exception e)
             {
-                Console.WriteLine("Update Error: " + error.Message);
+                Console.WriteLine("Update Error: " + e.Message);
             }
             finally
             {
