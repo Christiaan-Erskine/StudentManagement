@@ -15,6 +15,12 @@ namespace StudentManagement
         public loginForm()
         {
             InitializeComponent();
+
+            var dh = new DataHandler();
+
+            //test if the database is connected
+            //dh.Insert("LeaveType", new[] { (Field: "LeaveType", Value: "Sick Leave") });
+            //MessageBox.Show(dh.RetrieveData("LeaveType").Rows[0][0].ToString());
         }
     }
 }
