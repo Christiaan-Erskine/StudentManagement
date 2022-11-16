@@ -53,5 +53,12 @@ namespace StudentManagement.Presentation
             this.moduleTableAdapter.Fill(this.studentManagementDataSet.Module);
 
         }
+
+        private void lblExit_Click(object sender, EventArgs e)
+        {
+            MainModule mainModule = new MainModule();
+            mainModule.Show();
+            this.Close();
+        }
     }
 }

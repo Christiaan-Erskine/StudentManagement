@@ -41,6 +41,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.moduleTableAdapter = new StudentManagement.StudentManagementDataSetTableAdapters.ModuleTableAdapter();
             this.tableAdapterManager = new StudentManagement.StudentManagementDataSetTableAdapters.TableAdapterManager();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.lblExit = new System.Windows.Forms.Label();
             moduleCodeLabel = new System.Windows.Forms.Label();
             nameLabel = new System.Windows.Forms.Label();
             descriptionLabel = new System.Windows.Forms.Label();
@@ -52,7 +54,7 @@
             // moduleCodeLabel
             // 
             moduleCodeLabel.AutoSize = true;
-            moduleCodeLabel.Location = new System.Drawing.Point(98, 109);
+            moduleCodeLabel.Location = new System.Drawing.Point(105, 124);
             moduleCodeLabel.Name = "moduleCodeLabel";
             moduleCodeLabel.Size = new System.Drawing.Size(73, 13);
             moduleCodeLabel.TabIndex = 7;
@@ -61,7 +63,7 @@
             // nameLabel
             // 
             nameLabel.AutoSize = true;
-            nameLabel.Location = new System.Drawing.Point(133, 147);
+            nameLabel.Location = new System.Drawing.Point(140, 162);
             nameLabel.Name = "nameLabel";
             nameLabel.Size = new System.Drawing.Size(38, 13);
             nameLabel.TabIndex = 8;
@@ -70,7 +72,7 @@
             // descriptionLabel
             // 
             descriptionLabel.AutoSize = true;
-            descriptionLabel.Location = new System.Drawing.Point(108, 186);
+            descriptionLabel.Location = new System.Drawing.Point(115, 201);
             descriptionLabel.Name = "descriptionLabel";
             descriptionLabel.Size = new System.Drawing.Size(63, 13);
             descriptionLabel.TabIndex = 9;
@@ -81,6 +83,8 @@
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.lblExit);
+            this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(descriptionLabel);
             this.panel1.Controls.Add(this.descriptionTextBox);
             this.panel1.Controls.Add(nameLabel);
@@ -96,7 +100,7 @@
             // descriptionTextBox
             // 
             this.descriptionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.moduleBindingSource, "Description", true));
-            this.descriptionTextBox.Location = new System.Drawing.Point(177, 183);
+            this.descriptionTextBox.Location = new System.Drawing.Point(184, 198);
             this.descriptionTextBox.Name = "descriptionTextBox";
             this.descriptionTextBox.Size = new System.Drawing.Size(100, 20);
             this.descriptionTextBox.TabIndex = 10;
@@ -114,7 +118,7 @@
             // nameTextBox
             // 
             this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.moduleBindingSource, "Name", true));
-            this.nameTextBox.Location = new System.Drawing.Point(177, 144);
+            this.nameTextBox.Location = new System.Drawing.Point(184, 159);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(100, 20);
             this.nameTextBox.TabIndex = 9;
@@ -122,7 +126,7 @@
             // moduleCodeTextBox
             // 
             this.moduleCodeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.moduleBindingSource, "ModuleCode", true));
-            this.moduleCodeTextBox.Location = new System.Drawing.Point(177, 106);
+            this.moduleCodeTextBox.Location = new System.Drawing.Point(184, 121);
             this.moduleCodeTextBox.Name = "moduleCodeTextBox";
             this.moduleCodeTextBox.Size = new System.Drawing.Size(100, 20);
             this.moduleCodeTextBox.TabIndex = 8;
@@ -150,6 +154,35 @@
             this.tableAdapterManager.StudentModuleTableAdapter = null;
             this.tableAdapterManager.StudentTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = StudentManagement.StudentManagementDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(170)))), ((int)(((byte)(219)))));
+            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(104, 300);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(181, 32);
+            this.btnAdd.TabIndex = 11;
+            this.btnAdd.Text = "Add Module";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
+            // 
+            // lblExit
+            // 
+            this.lblExit.AutoSize = true;
+            this.lblExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExit.Location = new System.Drawing.Point(362, 6);
+            this.lblExit.Name = "lblExit";
+            this.lblExit.Size = new System.Drawing.Size(21, 20);
+            this.lblExit.TabIndex = 21;
+            this.lblExit.Text = "X";
+            this.lblExit.Click += new System.EventHandler(this.lblExit_Click);
             // 
             // AddModule
             // 
@@ -184,5 +217,7 @@
         private System.Windows.Forms.TextBox descriptionTextBox;
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.TextBox moduleCodeTextBox;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Label lblExit;
     }
 }

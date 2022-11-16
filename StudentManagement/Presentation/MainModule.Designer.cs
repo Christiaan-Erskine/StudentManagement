@@ -69,6 +69,7 @@
             this.btnRemove.TabIndex = 9;
             this.btnRemove.Text = "Remove Modules";
             this.btnRemove.UseVisualStyleBackColor = false;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnUpdate
             // 
@@ -85,6 +86,7 @@
             this.btnUpdate.TabIndex = 8;
             this.btnUpdate.Text = "Update Modules";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label4
             // 
@@ -128,6 +130,7 @@
             this.btnView.TabIndex = 2;
             this.btnView.Text = "View Modules";
             this.btnView.UseVisualStyleBackColor = false;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // btnAdd
             // 

@@ -56,6 +56,8 @@
             this.moduleCodeTextBox = new System.Windows.Forms.TextBox();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.descriptionTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblExit = new System.Windows.Forms.Label();
             moduleCodeLabel = new System.Windows.Forms.Label();
             nameLabel = new System.Windows.Forms.Label();
             descriptionLabel = new System.Windows.Forms.Label();
@@ -72,6 +74,8 @@
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.lblExit);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(descriptionLabel);
             this.panel1.Controls.Add(this.descriptionTextBox);
             this.panel1.Controls.Add(nameLabel);
@@ -251,7 +255,7 @@
             // moduleCodeLabel
             // 
             moduleCodeLabel.AutoSize = true;
-            moduleCodeLabel.Location = new System.Drawing.Point(460, 119);
+            moduleCodeLabel.Location = new System.Drawing.Point(434, 174);
             moduleCodeLabel.Name = "moduleCodeLabel";
             moduleCodeLabel.Size = new System.Drawing.Size(73, 13);
             moduleCodeLabel.TabIndex = 13;
@@ -260,7 +264,7 @@
             // moduleCodeTextBox
             // 
             this.moduleCodeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.moduleBindingSource, "ModuleCode", true));
-            this.moduleCodeTextBox.Location = new System.Drawing.Point(539, 116);
+            this.moduleCodeTextBox.Location = new System.Drawing.Point(513, 171);
             this.moduleCodeTextBox.Name = "moduleCodeTextBox";
             this.moduleCodeTextBox.Size = new System.Drawing.Size(100, 20);
             this.moduleCodeTextBox.TabIndex = 14;
@@ -268,7 +272,7 @@
             // nameLabel
             // 
             nameLabel.AutoSize = true;
-            nameLabel.Location = new System.Drawing.Point(495, 161);
+            nameLabel.Location = new System.Drawing.Point(469, 216);
             nameLabel.Name = "nameLabel";
             nameLabel.Size = new System.Drawing.Size(38, 13);
             nameLabel.TabIndex = 14;
@@ -277,7 +281,7 @@
             // nameTextBox
             // 
             this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.moduleBindingSource, "Name", true));
-            this.nameTextBox.Location = new System.Drawing.Point(539, 158);
+            this.nameTextBox.Location = new System.Drawing.Point(513, 213);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(100, 20);
             this.nameTextBox.TabIndex = 15;
@@ -285,7 +289,7 @@
             // descriptionLabel
             // 
             descriptionLabel.AutoSize = true;
-            descriptionLabel.Location = new System.Drawing.Point(470, 202);
+            descriptionLabel.Location = new System.Drawing.Point(444, 257);
             descriptionLabel.Name = "descriptionLabel";
             descriptionLabel.Size = new System.Drawing.Size(63, 13);
             descriptionLabel.TabIndex = 15;
@@ -294,10 +298,31 @@
             // descriptionTextBox
             // 
             this.descriptionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.moduleBindingSource, "Description", true));
-            this.descriptionTextBox.Location = new System.Drawing.Point(539, 199);
+            this.descriptionTextBox.Location = new System.Drawing.Point(513, 254);
             this.descriptionTextBox.Name = "descriptionTextBox";
             this.descriptionTextBox.Size = new System.Drawing.Size(100, 20);
             this.descriptionTextBox.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(434, 126);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(156, 13);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Data will be saved as you edit it";
+            // 
+            // lblExit
+            // 
+            this.lblExit.AutoSize = true;
+            this.lblExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExit.Location = new System.Drawing.Point(664, 2);
+            this.lblExit.Name = "lblExit";
+            this.lblExit.Size = new System.Drawing.Size(21, 20);
+            this.lblExit.TabIndex = 22;
+            this.lblExit.Text = "X";
+            this.lblExit.Click += new System.EventHandler(this.lblExit_Click);
             // 
             // UpdateModule
             // 
@@ -350,5 +375,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblExit;
     }
 }

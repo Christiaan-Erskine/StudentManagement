@@ -25,7 +25,7 @@ namespace StudentManagement.Presentation
 
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void btnAdd_Click_1(object sender, EventArgs e)
         {
             dh.InsertObject(
                     new Module(
@@ -43,7 +43,13 @@ namespace StudentManagement.Presentation
             MainModule mainModule = new MainModule();
             mainModule.Show();
             this.Close();
+        }
 
+        private void lblExit_Click(object sender, EventArgs e)
+        {
+            MainModule mainModule = new MainModule();
+            mainModule.Show();
+            this.Close();
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace StudentManagement.Presentation
 {
-    public partial class MainModule : Form
+    public partial class DeleteModule : Form
     {
-        public MainModule()
+        public DeleteModule()
         {
             InitializeComponent();
         }
@@ -31,24 +31,25 @@ namespace StudentManagement.Presentation
             this.Close();
         }
 
-        private void btnView_Click(object sender, EventArgs e)
+        private void moduleBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            ViewModules viewModules = new ViewModules();
-            viewModules.Show();
-            this.Close();
+            this.Validate();
+            this.moduleBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.studentManagementDataSet);
+
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void DeleteModule_Load(object sender, EventArgs e)
         {
-            UpdateModule updateModule = new UpdateModule();
-            updateModule.Show();
-            this.Close();
+            // TODO: This line of code loads data into the 'studentManagementDataSet.Module' table. You can move, or remove it, as needed.
+            this.moduleTableAdapter.Fill(this.studentManagementDataSet.Module);
+
         }
 
-        private void btnRemove_Click(object sender, EventArgs e)
+        private void lblExit_Click(object sender, EventArgs e)
         {
-            DeleteModule deleteModule = new DeleteModule();
-            deleteModule.Show();
+            MainModule mainModule = new MainModule();
+            mainModule.Show();
             this.Close();
         }
     }

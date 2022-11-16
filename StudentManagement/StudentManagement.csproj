@@ -106,6 +106,12 @@
     <Compile Include="Presentation\AddModule.Designer.cs">
       <DependentUpon>AddModule.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\DeleteModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\DeleteModule.Designer.cs">
+      <DependentUpon>DeleteModule.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\UpdateModule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\AddModule.resx">
       <DependentUpon>AddModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\DeleteModule.resx">
+      <DependentUpon>DeleteModule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\UpdateModule.resx">
       <DependentUpon>UpdateModule.cs</DependentUpon>
