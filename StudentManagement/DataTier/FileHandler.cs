@@ -81,7 +81,7 @@ namespace StudentManagement
             {
                 Console.Error.WriteLine("Error: " + e.Message);
             }
-            return null;
+            return new List<string>();
         }
 
         public (string field, string value)[] GetFieldValues(object obj)
