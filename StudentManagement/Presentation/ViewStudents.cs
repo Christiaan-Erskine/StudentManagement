@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace StudentManagement.Presentation
 {
-    public partial class MainStudent : Form
+    public partial class ViewStudents : Form
     {
-        public MainStudent()
+        public ViewStudents()
         {
             InitializeComponent();
         }
@@ -35,6 +35,28 @@ namespace StudentManagement.Presentation
         {
             ViewStudents viewStudents   = new ViewStudents();
             viewStudents.Show();
+            this.Close();
+        }
+
+        private void studentBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.studentBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.studentManagementDataSet);
+
+        }
+
+        private void ViewStudents_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'studentManagementDataSet.Student' table. You can move, or remove it, as needed.
+            this.studentTableAdapter.Fill(this.studentManagementDataSet.Student);
+
+        }
+
+        private void lblExit_Click(object sender, EventArgs e)
+        {
+            MainStudent mainStudent = new MainStudent();
+            mainStudent.Show();
             this.Close();
         }
     }

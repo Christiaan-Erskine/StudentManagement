@@ -111,6 +111,7 @@
             this.btnMainMenu.TabIndex = 3;
             this.btnMainMenu.Text = "Main Menu";
             this.btnMainMenu.UseVisualStyleBackColor = false;
+            this.btnMainMenu.Click += new System.EventHandler(this.btnMainMenu_Click);
             // 
             // btnView
             // 

@@ -67,7 +67,7 @@ SET DATEFORMAT YMD
 
 SET @DBName = db_name();
 --for csv insert. Change this to the location of the csv folder, remember to add a backslash at the end
-SET @RelDir = 'C:\Users\Hanno\OneDrive\Documents\Coding\Github\StudentManagement\StudentManagement\DataTier\csv\'	          ------------------CHANGE THE CSV PATH---------------
+SET @RelDir = 'C:\Users\Christiaan\Source\Repos\Christiaan-Erskine\StudentManagement\StudentManagement\DataTier\csv\'	          ------------------CHANGE THE CSV PATH---------------
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------

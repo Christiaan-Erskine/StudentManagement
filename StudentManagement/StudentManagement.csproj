@@ -78,6 +78,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Student.cs" />
     <Compile Include="DataTier\DataHandler.cs" />
     <Compile Include="DataTier\FileHandler.cs" />
     <Compile Include="Presentation\AddStudent.cs">
@@ -104,6 +105,18 @@
     <Compile Include="Presentation\MainModule.Designer.cs">
       <DependentUpon>MainModule.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\UpdateStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\UpdateStudents.Designer.cs">
+      <DependentUpon>UpdateStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\ViewStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\ViewStudents.Designer.cs">
+      <DependentUpon>ViewStudents.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\MainStudent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +131,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudentManagementDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentManagementDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Presentation\AddStudent.resx">
       <DependentUpon>AddStudent.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,6 +147,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\MainModule.resx">
       <DependentUpon>MainModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\UpdateStudents.resx">
+      <DependentUpon>UpdateStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\ViewStudents.resx">
+      <DependentUpon>ViewStudents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\MainStudent.resx">
       <DependentUpon>MainStudent.cs</DependentUpon>
@@ -156,6 +180,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="StudentManagementDataSet.xsc">
+      <DependentUpon>StudentManagementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="StudentManagementDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StudentManagementDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StudentManagementDataSet.xss">
+      <DependentUpon>StudentManagementDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -163,5 +198,6 @@
   <ItemGroup>
     <None Include="Resources\background.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

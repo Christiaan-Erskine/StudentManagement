@@ -16,5 +16,12 @@ namespace StudentManagement.Presentation
         {
             InitializeComponent();
         }
+
+        private void btnMainMenu_Click(object sender, EventArgs e)
+        {
+            MainMenu mainMenu = new MainMenu();
+            mainMenu.Show();
+            this.Close();
+        }
     }
 }
