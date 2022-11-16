@@ -16,5 +16,26 @@ namespace StudentManagement.Presentation
         {
             InitializeComponent();
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            loginForm loginForm = new loginForm();
+            loginForm.Show();
+            this.Close();
+        }
+
+        private void btnStudents_Click(object sender, EventArgs e)
+        {
+            MainStudent mainStudent = new MainStudent();
+            mainStudent.Show();
+            this.Close();
+        }
+
+        private void btnModules_Click(object sender, EventArgs e)
+        {
+            MainModule mainModule = new MainModule();
+            mainModule.Show();
+            this.Close();
+        }
     }
 }

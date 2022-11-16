@@ -1,6 +1,6 @@
 ﻿namespace StudentManagement.Presentation
 {
-    partial class MainModule
+    partial class AddStudent
     {
         /// <summary>
         /// Required designer variable.
@@ -49,10 +49,10 @@
             this.panel1.Controls.Add(this.btnMainMenu);
             this.panel1.Controls.Add(this.btnView);
             this.panel1.Controls.Add(this.btnAdd);
-            this.panel1.Location = new System.Drawing.Point(343, 102);
+            this.panel1.Location = new System.Drawing.Point(103, 49);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(349, 384);
-            this.panel1.TabIndex = 12;
+            this.panel1.Size = new System.Drawing.Size(864, 514);
+            this.panel1.TabIndex = 11;
             // 
             // btnRemove
             // 
@@ -67,7 +67,7 @@
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(181, 32);
             this.btnRemove.TabIndex = 9;
-            this.btnRemove.Text = "Remove Modules";
+            this.btnRemove.Text = "Remove Student";
             this.btnRemove.UseVisualStyleBackColor = false;
             // 
             // btnUpdate
@@ -83,7 +83,7 @@
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(181, 32);
             this.btnUpdate.TabIndex = 8;
-            this.btnUpdate.Text = "Update Modules";
+            this.btnUpdate.Text = "Update Student";
             this.btnUpdate.UseVisualStyleBackColor = false;
             // 
             // label4
@@ -92,9 +92,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(86, 14);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(167, 42);
+            this.label4.Size = new System.Drawing.Size(174, 42);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Modules";
+            this.label4.Text = "Students";
             // 
             // btnMainMenu
             // 
@@ -125,7 +125,7 @@
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(181, 32);
             this.btnView.TabIndex = 2;
-            this.btnView.Text = "View Modules";
+            this.btnView.Text = "View Studnets";
             this.btnView.UseVisualStyleBackColor = false;
             // 
             // btnAdd
@@ -141,21 +141,21 @@
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(181, 32);
             this.btnAdd.TabIndex = 1;
-            this.btnAdd.Text = "Add Module";
+            this.btnAdd.Text = "Add Student";
             this.btnAdd.UseVisualStyleBackColor = false;
             // 
-            // MainModule
+            // AddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::StudentManagement.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1035, 589);
+            this.ClientSize = new System.Drawing.Size(1070, 648);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "MainModule";
+            this.Name = "AddStudent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MainModule";
+            this.Text = "MainStudent";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -166,11 +166,11 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnRemove;
-        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnMainMenu;
         private System.Windows.Forms.Button btnView;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }

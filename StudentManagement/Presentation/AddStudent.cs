@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace StudentManagement.Presentation
 {
-    public partial class MainStudent : Form
+    public partial class AddStudent : Form
     {
-        public MainStudent()
+        public AddStudent()
         {
             InitializeComponent();
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
