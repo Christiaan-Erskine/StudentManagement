@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeleteModule));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblExit = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.studentManagementDataSet = new StudentManagement.StudentManagementDataSet();
             this.moduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -47,11 +48,11 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.moduleBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.moduleDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblExit = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentManagementDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.moduleBindingSource)).BeginInit();
@@ -65,14 +66,26 @@
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.lblExit);
             this.panel1.Controls.Add(this.moduleBindingNavigator);
             this.panel1.Controls.Add(this.moduleDataGridView);
+            this.panel1.Controls.Add(this.lblExit);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(343, 102);
+            this.panel1.Location = new System.Drawing.Point(315, 102);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(388, 384);
+            this.panel1.Size = new System.Drawing.Size(405, 384);
             this.panel1.TabIndex = 12;
+            // 
+            // lblExit
+            // 
+            this.lblExit.AutoSize = true;
+            this.lblExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExit.Location = new System.Drawing.Point(362, 4);
+            this.lblExit.Name = "lblExit";
+            this.lblExit.Size = new System.Drawing.Size(21, 20);
+            this.lblExit.TabIndex = 19;
+            this.lblExit.Text = "X";
+            this.lblExit.Click += new System.EventHandler(this.lblExit_Click);
             // 
             // label4
             // 
@@ -125,15 +138,16 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
-            this.bindingNavigatorDeleteItem});
-            this.moduleBindingNavigator.Location = new System.Drawing.Point(21, 316);
+            this.bindingNavigatorDeleteItem,
+            this.moduleBindingNavigatorSaveItem});
+            this.moduleBindingNavigator.Location = new System.Drawing.Point(30, 85);
             this.moduleBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.moduleBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.moduleBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.moduleBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.moduleBindingNavigator.Name = "moduleBindingNavigator";
             this.moduleBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.moduleBindingNavigator.Size = new System.Drawing.Size(232, 25);
+            this.moduleBindingNavigator.Size = new System.Drawing.Size(255, 25);
             this.moduleBindingNavigator.TabIndex = 13;
             this.moduleBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -214,6 +228,15 @@
             this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
+            // moduleBindingNavigatorSaveItem
+            // 
+            this.moduleBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.moduleBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("moduleBindingNavigatorSaveItem.Image")));
+            this.moduleBindingNavigatorSaveItem.Name = "moduleBindingNavigatorSaveItem";
+            this.moduleBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.moduleBindingNavigatorSaveItem.Text = "Save Data";
+            this.moduleBindingNavigatorSaveItem.Click += new System.EventHandler(this.moduleBindingNavigatorSaveItem_Click_1);
+            // 
             // moduleDataGridView
             // 
             this.moduleDataGridView.AutoGenerateColumns = false;
@@ -223,10 +246,10 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
             this.moduleDataGridView.DataSource = this.moduleBindingSource;
-            this.moduleDataGridView.Location = new System.Drawing.Point(21, 93);
+            this.moduleDataGridView.Location = new System.Drawing.Point(30, 113);
             this.moduleDataGridView.Name = "moduleDataGridView";
-            this.moduleDataGridView.Size = new System.Drawing.Size(344, 220);
-            this.moduleDataGridView.TabIndex = 7;
+            this.moduleDataGridView.Size = new System.Drawing.Size(343, 249);
+            this.moduleDataGridView.TabIndex = 19;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -245,18 +268,6 @@
             this.dataGridViewTextBoxColumn3.DataPropertyName = "Description";
             this.dataGridViewTextBoxColumn3.HeaderText = "Description";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // lblExit
-            // 
-            this.lblExit.AutoSize = true;
-            this.lblExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExit.Location = new System.Drawing.Point(362, 4);
-            this.lblExit.Name = "lblExit";
-            this.lblExit.Size = new System.Drawing.Size(21, 20);
-            this.lblExit.TabIndex = 19;
-            this.lblExit.Text = "X";
-            this.lblExit.Click += new System.EventHandler(this.lblExit_Click);
             // 
             // DeleteModule
             // 
@@ -288,6 +299,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblExit;
         private StudentManagementDataSet studentManagementDataSet;
         private System.Windows.Forms.BindingSource moduleBindingSource;
         private StudentManagementDataSetTableAdapters.ModuleTableAdapter moduleTableAdapter;
@@ -303,10 +315,10 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.ToolStripButton moduleBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView moduleDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.Label lblExit;
     }
 }

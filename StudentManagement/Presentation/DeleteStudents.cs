@@ -50,6 +50,8 @@ namespace StudentManagement.Presentation
         {
             // TODO: This line of code loads data into the 'studentManagementDataSet.Student' table. You can move, or remove it, as needed.
             this.studentTableAdapter.Fill(this.studentManagementDataSet.Student);
+            // TODO: This line of code loads data into the 'studentManagementDataSet.Student' table. You can move, or remove it, as needed.
+            this.studentTableAdapter.Fill(this.studentManagementDataSet.Student);
 
         }
 
@@ -58,6 +60,14 @@ namespace StudentManagement.Presentation
             MainStudent mainStudent = new MainStudent();
             mainStudent.Show();
             this.Close();
+        }
+
+        private void studentBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.studentBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.studentManagementDataSet);
+
         }
     }
 }

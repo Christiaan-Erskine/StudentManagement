@@ -68,7 +68,7 @@
             this.panel1.Controls.Add(this.moduleBindingNavigator);
             this.panel1.Controls.Add(this.moduleDataGridView);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(330, 102);
+            this.panel1.Location = new System.Drawing.Point(310, 102);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(414, 384);
             this.panel1.TabIndex = 12;

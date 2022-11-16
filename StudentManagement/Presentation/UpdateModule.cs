@@ -51,6 +51,10 @@ namespace StudentManagement.Presentation
         {
             // TODO: This line of code loads data into the 'studentManagementDataSet.Module' table. You can move, or remove it, as needed.
             this.moduleTableAdapter.Fill(this.studentManagementDataSet.Module);
+            // TODO: This line of code loads data into the 'studentManagementDataSet.Module' table. You can move, or remove it, as needed.
+            this.moduleTableAdapter.Fill(this.studentManagementDataSet.Module);
+            // TODO: This line of code loads data into the 'studentManagementDataSet.Module' table. You can move, or remove it, as needed.
+            this.moduleTableAdapter.Fill(this.studentManagementDataSet.Module);
 
         }
 
@@ -59,6 +63,22 @@ namespace StudentManagement.Presentation
             MainModule mainModule = new MainModule();
             mainModule.Show();
             this.Close();
+        }
+
+        private void moduleBindingNavigatorSaveItem_Click_2(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.moduleBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.studentManagementDataSet);
+
+        }
+
+        private void moduleBindingNavigatorSaveItem_Click_3(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.moduleBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.studentManagementDataSet);
+
         }
     }
 }

@@ -79,7 +79,7 @@
             this.panel1.Controls.Add(this.btnLogout);
             this.panel1.Controls.Add(this.btnModules);
             this.panel1.Controls.Add(this.btnStudents);
-            this.panel1.Location = new System.Drawing.Point(364, 122);
+            this.panel1.Location = new System.Drawing.Point(364, 101);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(349, 384);
             this.panel1.TabIndex = 10;
