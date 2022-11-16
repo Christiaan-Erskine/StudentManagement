@@ -43,18 +43,40 @@ namespace StudentManagement
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
-            
-        }
+            if (txtUsername.Text != string.Empty && txtPassword.Text != string.Empty)
+            {
+                FileHandler fh = new FileHandler();
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-            SignUp signUp = new SignUp();
-            signUp.Show();
-            this.Hide();
+                List<String> users = fh.ReadList();
+
+                if (users != null && users.Contains($"{txtUsername.Text},{txtPassword.Text}"))
+                {
+                    Presentation.MainMenu mainMenu = new Presentation.MainMenu();
+                    mainMenu.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid user credentials, please try again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Please check the form to ensure that you have filled in all the values", "Missing values", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void loginForm_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void lblSignUp_Click(object sender, EventArgs e)
+        {
+            SignUp signUp = new SignUp();
+            signUp.Show();
+            this.Hide();
         }
     }
 }

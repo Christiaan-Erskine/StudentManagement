@@ -27,7 +27,7 @@ namespace StudentManagement
         }
         public FileHandler()
         {
-            Path = "../Resources/users.txt";
+            Path = "users.txt";
         }
 
 
@@ -45,18 +45,43 @@ namespace StudentManagement
             }
             return string.Empty;
         }
+
         //write file
         public void Write(string text, bool append = false)
         {
             try
             {
                 using StreamWriter sw = new(Path, append);
-                sw.Write(text);
+                sw.WriteLine(text);
             }
             catch (Exception e)
             {
                 Console.Error.WriteLine("Error: " + e.Message);
             }
+        }
+
+        public List<String> ReadList()
+        {
+
+            try
+            {
+                using StreamReader sr = new(Path);
+                List<String> list = new List<String>();
+                String line = sr.ReadLine();
+
+                while (line != null)
+                {
+                    list.Add(line);
+                    line = sr.ReadLine();
+                }
+
+                return list;
+            }
+            catch (Exception e)
+            {
+                Console.Error.WriteLine("Error: " + e.Message);
+            }
+            return null;
         }
 
         public (string field, string value)[] GetFieldValues(object obj)
