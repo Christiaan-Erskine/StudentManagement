@@ -24,8 +24,8 @@ namespace StudentManagement
 
         public DataHandler()
         {
-            ConnectionString = @"Data Source=.;Initial Catalog=StudentManagement;Integrated Security=True";
-            sql_connection = new SqlConnection(ConnectionString);
+            ConnectionString = @"Data Source=.;Initial Catalog=StudentManagement;Integrated Security=SSPI";
+            sql_connection = new SqlConnection(ConnectionString);       
         }
 
         public (string field, string value)[] GetFieldValues(object obj)
