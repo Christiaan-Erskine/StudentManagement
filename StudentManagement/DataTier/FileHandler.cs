@@ -27,7 +27,7 @@ namespace StudentManagement
         }
         public FileHandler()
         {
-            Path = "file.txt";
+            Path = "../Resources/users.txt";
         }
 
 
