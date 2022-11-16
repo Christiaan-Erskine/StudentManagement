@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace StudentManagement.Presentation
 {
-    public partial class MainModule : Form
+    public partial class ViewModules : Form
     {
-        public MainModule()
+        public ViewModules()
         {
             InitializeComponent();
         }
@@ -29,6 +29,21 @@ namespace StudentManagement.Presentation
             AddModule addModule = new AddModule();
             addModule.Show();
             this.Close();
+        }
+
+        private void moduleBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.moduleBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.studentManagementDataSet);
+
+        }
+
+        private void ViewModules_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'studentManagementDataSet.Module' table. You can move, or remove it, as needed.
+            this.moduleTableAdapter.Fill(this.studentManagementDataSet.Module);
+
         }
     }
 }

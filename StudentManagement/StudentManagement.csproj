@@ -78,6 +78,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Module.cs" />
     <Compile Include="Classes\Student.cs" />
     <Compile Include="DataTier\DataHandler.cs" />
     <Compile Include="DataTier\FileHandler.cs" />
@@ -99,11 +100,35 @@
     <Compile Include="Presentation\MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\AddModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\AddModule.Designer.cs">
+      <DependentUpon>AddModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\UpdateModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\UpdateModule.Designer.cs">
+      <DependentUpon>UpdateModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\ViewModules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\ViewModules.Designer.cs">
+      <DependentUpon>ViewModules.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\MainModule.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentation\MainModule.Designer.cs">
       <DependentUpon>MainModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\DeleteStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\DeleteStudents.Designer.cs">
+      <DependentUpon>DeleteStudents.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\UpdateStudents.cs">
       <SubType>Form</SubType>
@@ -145,8 +170,20 @@
     <EmbeddedResource Include="Presentation\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\AddModule.resx">
+      <DependentUpon>AddModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\UpdateModule.resx">
+      <DependentUpon>UpdateModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\ViewModules.resx">
+      <DependentUpon>ViewModules.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation\MainModule.resx">
       <DependentUpon>MainModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\DeleteStudents.resx">
+      <DependentUpon>DeleteStudents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\UpdateStudents.resx">
       <DependentUpon>UpdateStudents.cs</DependentUpon>

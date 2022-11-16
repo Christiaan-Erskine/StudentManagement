@@ -144,6 +144,7 @@
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Add Module";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // MainModule
             // 

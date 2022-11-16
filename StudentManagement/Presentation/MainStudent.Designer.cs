@@ -69,6 +69,7 @@
             this.btnRemove.TabIndex = 9;
             this.btnRemove.Text = "Remove Student";
             this.btnRemove.UseVisualStyleBackColor = false;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnUpdate
             // 
@@ -85,6 +86,7 @@
             this.btnUpdate.TabIndex = 8;
             this.btnUpdate.Text = "Update Student";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label4
             // 

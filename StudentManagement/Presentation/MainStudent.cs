@@ -37,5 +37,19 @@ namespace StudentManagement.Presentation
             viewStudents.Show();
             this.Close();
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            UpdateStudents updateStudents  = new UpdateStudents();
+            updateStudents.Show();
+            this.Close();
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            DeleteStudents deleteStudents = new DeleteStudents();
+            deleteStudents.Show();
+            this.Close();
+        }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace StudentManagement.Presentation
 {
-    public partial class UpdateStudents : Form
+    public partial class DeleteStudents : Form
     {
-        public UpdateStudents()
+        public DeleteStudents()
         {
             InitializeComponent();
         }
@@ -59,6 +59,5 @@ namespace StudentManagement.Presentation
             mainStudent.Show();
             this.Close();
         }
-
     }
 }
