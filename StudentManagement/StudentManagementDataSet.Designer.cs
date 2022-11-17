@@ -34,13 +34,13 @@ namespace StudentManagement {
         
         private StudentModuleDataTable tableStudentModule;
         
-        private global::System.Data.DataRelation relationFK__ResourceM__Modul__3A81B327;
+        private global::System.Data.DataRelation relationFK__ResourceM__Modul__6ABAD62E;
         
-        private global::System.Data.DataRelation relationFK__ResourceM__Resou__398D8EEE;
+        private global::System.Data.DataRelation relationFK__ResourceM__Resou__69C6B1F5;
         
-        private global::System.Data.DataRelation relationFK__StudentMo__Modul__35BCFE0A;
+        private global::System.Data.DataRelation relationFK__StudentMo__Modul__65F62111;
         
-        private global::System.Data.DataRelation relationFK__StudentMo__Stude__34C8D9D1;
+        private global::System.Data.DataRelation relationFK__StudentMo__Stude__6501FCD8;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -298,10 +298,10 @@ namespace StudentManagement {
                     this.tableStudentModule.InitVars();
                 }
             }
-            this.relationFK__ResourceM__Modul__3A81B327 = this.Relations["FK__ResourceM__Modul__3A81B327"];
-            this.relationFK__ResourceM__Resou__398D8EEE = this.Relations["FK__ResourceM__Resou__398D8EEE"];
-            this.relationFK__StudentMo__Modul__35BCFE0A = this.Relations["FK__StudentMo__Modul__35BCFE0A"];
-            this.relationFK__StudentMo__Stude__34C8D9D1 = this.Relations["FK__StudentMo__Stude__34C8D9D1"];
+            this.relationFK__ResourceM__Modul__6ABAD62E = this.Relations["FK__ResourceM__Modul__6ABAD62E"];
+            this.relationFK__ResourceM__Resou__69C6B1F5 = this.Relations["FK__ResourceM__Resou__69C6B1F5"];
+            this.relationFK__StudentMo__Modul__65F62111 = this.Relations["FK__StudentMo__Modul__65F62111"];
+            this.relationFK__StudentMo__Stude__6501FCD8 = this.Relations["FK__StudentMo__Stude__6501FCD8"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -322,22 +322,22 @@ namespace StudentManagement {
             base.Tables.Add(this.tableStudent);
             this.tableStudentModule = new StudentModuleDataTable();
             base.Tables.Add(this.tableStudentModule);
-            this.relationFK__ResourceM__Modul__3A81B327 = new global::System.Data.DataRelation("FK__ResourceM__Modul__3A81B327", new global::System.Data.DataColumn[] {
+            this.relationFK__ResourceM__Modul__6ABAD62E = new global::System.Data.DataRelation("FK__ResourceM__Modul__6ABAD62E", new global::System.Data.DataColumn[] {
                         this.tableModule.ModuleCodeColumn}, new global::System.Data.DataColumn[] {
                         this.tableResourceModule.ModuleCodeColumn}, false);
-            this.Relations.Add(this.relationFK__ResourceM__Modul__3A81B327);
-            this.relationFK__ResourceM__Resou__398D8EEE = new global::System.Data.DataRelation("FK__ResourceM__Resou__398D8EEE", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__ResourceM__Modul__6ABAD62E);
+            this.relationFK__ResourceM__Resou__69C6B1F5 = new global::System.Data.DataRelation("FK__ResourceM__Resou__69C6B1F5", new global::System.Data.DataColumn[] {
                         this.tableResource.ResourceIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableResourceModule.ResourceIDColumn}, false);
-            this.Relations.Add(this.relationFK__ResourceM__Resou__398D8EEE);
-            this.relationFK__StudentMo__Modul__35BCFE0A = new global::System.Data.DataRelation("FK__StudentMo__Modul__35BCFE0A", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__ResourceM__Resou__69C6B1F5);
+            this.relationFK__StudentMo__Modul__65F62111 = new global::System.Data.DataRelation("FK__StudentMo__Modul__65F62111", new global::System.Data.DataColumn[] {
                         this.tableModule.ModuleCodeColumn}, new global::System.Data.DataColumn[] {
                         this.tableStudentModule.ModuleCodeColumn}, false);
-            this.Relations.Add(this.relationFK__StudentMo__Modul__35BCFE0A);
-            this.relationFK__StudentMo__Stude__34C8D9D1 = new global::System.Data.DataRelation("FK__StudentMo__Stude__34C8D9D1", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__StudentMo__Modul__65F62111);
+            this.relationFK__StudentMo__Stude__6501FCD8 = new global::System.Data.DataRelation("FK__StudentMo__Stude__6501FCD8", new global::System.Data.DataColumn[] {
                         this.tableStudent.StudentNumberColumn}, new global::System.Data.DataColumn[] {
                         this.tableStudentModule.StudentNumberColumn}, false);
-            this.Relations.Add(this.relationFK__StudentMo__Stude__34C8D9D1);
+            this.Relations.Add(this.relationFK__StudentMo__Stude__6501FCD8);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1118,16 +1118,16 @@ namespace StudentManagement {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ResourceModuleRow AddResourceModuleRow(ResourceRow parentResourceRowByFK__ResourceM__Resou__398D8EEE, ModuleRow parentModuleRowByFK__ResourceM__Modul__3A81B327) {
+            public ResourceModuleRow AddResourceModuleRow(ResourceRow parentResourceRowByFK__ResourceM__Resou__69C6B1F5, ModuleRow parentModuleRowByFK__ResourceM__Modul__6ABAD62E) {
                 ResourceModuleRow rowResourceModuleRow = ((ResourceModuleRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null};
-                if ((parentResourceRowByFK__ResourceM__Resou__398D8EEE != null)) {
-                    columnValuesArray[0] = parentResourceRowByFK__ResourceM__Resou__398D8EEE[0];
+                if ((parentResourceRowByFK__ResourceM__Resou__69C6B1F5 != null)) {
+                    columnValuesArray[0] = parentResourceRowByFK__ResourceM__Resou__69C6B1F5[0];
                 }
-                if ((parentModuleRowByFK__ResourceM__Modul__3A81B327 != null)) {
-                    columnValuesArray[1] = parentModuleRowByFK__ResourceM__Modul__3A81B327[0];
+                if ((parentModuleRowByFK__ResourceM__Modul__6ABAD62E != null)) {
+                    columnValuesArray[1] = parentModuleRowByFK__ResourceM__Modul__6ABAD62E[0];
                 }
                 rowResourceModuleRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowResourceModuleRow);
@@ -1767,16 +1767,16 @@ namespace StudentManagement {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public StudentModuleRow AddStudentModuleRow(StudentRow parentStudentRowByFK__StudentMo__Stude__34C8D9D1, ModuleRow parentModuleRowByFK__StudentMo__Modul__35BCFE0A) {
+            public StudentModuleRow AddStudentModuleRow(StudentRow parentStudentRowByFK__StudentMo__Stude__6501FCD8, ModuleRow parentModuleRowByFK__StudentMo__Modul__65F62111) {
                 StudentModuleRow rowStudentModuleRow = ((StudentModuleRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null};
-                if ((parentStudentRowByFK__StudentMo__Stude__34C8D9D1 != null)) {
-                    columnValuesArray[0] = parentStudentRowByFK__StudentMo__Stude__34C8D9D1[0];
+                if ((parentStudentRowByFK__StudentMo__Stude__6501FCD8 != null)) {
+                    columnValuesArray[0] = parentStudentRowByFK__StudentMo__Stude__6501FCD8[0];
                 }
-                if ((parentModuleRowByFK__StudentMo__Modul__35BCFE0A != null)) {
-                    columnValuesArray[1] = parentModuleRowByFK__StudentMo__Modul__35BCFE0A[0];
+                if ((parentModuleRowByFK__StudentMo__Modul__65F62111 != null)) {
+                    columnValuesArray[1] = parentModuleRowByFK__StudentMo__Modul__65F62111[0];
                 }
                 rowStudentModuleRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowStudentModuleRow);
@@ -2022,22 +2022,22 @@ namespace StudentManagement {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public ResourceModuleRow[] GetResourceModuleRows() {
-                if ((this.Table.ChildRelations["FK__ResourceM__Modul__3A81B327"] == null)) {
+                if ((this.Table.ChildRelations["FK__ResourceM__Modul__6ABAD62E"] == null)) {
                     return new ResourceModuleRow[0];
                 }
                 else {
-                    return ((ResourceModuleRow[])(base.GetChildRows(this.Table.ChildRelations["FK__ResourceM__Modul__3A81B327"])));
+                    return ((ResourceModuleRow[])(base.GetChildRows(this.Table.ChildRelations["FK__ResourceM__Modul__6ABAD62E"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public StudentModuleRow[] GetStudentModuleRows() {
-                if ((this.Table.ChildRelations["FK__StudentMo__Modul__35BCFE0A"] == null)) {
+                if ((this.Table.ChildRelations["FK__StudentMo__Modul__65F62111"] == null)) {
                     return new StudentModuleRow[0];
                 }
                 else {
-                    return ((StudentModuleRow[])(base.GetChildRows(this.Table.ChildRelations["FK__StudentMo__Modul__35BCFE0A"])));
+                    return ((StudentModuleRow[])(base.GetChildRows(this.Table.ChildRelations["FK__StudentMo__Modul__65F62111"])));
                 }
             }
         }
@@ -2126,11 +2126,11 @@ namespace StudentManagement {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public ResourceModuleRow[] GetResourceModuleRows() {
-                if ((this.Table.ChildRelations["FK__ResourceM__Resou__398D8EEE"] == null)) {
+                if ((this.Table.ChildRelations["FK__ResourceM__Resou__69C6B1F5"] == null)) {
                     return new ResourceModuleRow[0];
                 }
                 else {
-                    return ((ResourceModuleRow[])(base.GetChildRows(this.Table.ChildRelations["FK__ResourceM__Resou__398D8EEE"])));
+                    return ((ResourceModuleRow[])(base.GetChildRows(this.Table.ChildRelations["FK__ResourceM__Resou__69C6B1F5"])));
                 }
             }
         }
@@ -2185,10 +2185,10 @@ namespace StudentManagement {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public ModuleRow ModuleRow {
                 get {
-                    return ((ModuleRow)(this.GetParentRow(this.Table.ParentRelations["FK__ResourceM__Modul__3A81B327"])));
+                    return ((ModuleRow)(this.GetParentRow(this.Table.ParentRelations["FK__ResourceM__Modul__6ABAD62E"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__ResourceM__Modul__3A81B327"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__ResourceM__Modul__6ABAD62E"]);
                 }
             }
             
@@ -2196,10 +2196,10 @@ namespace StudentManagement {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public ResourceRow ResourceRow {
                 get {
-                    return ((ResourceRow)(this.GetParentRow(this.Table.ParentRelations["FK__ResourceM__Resou__398D8EEE"])));
+                    return ((ResourceRow)(this.GetParentRow(this.Table.ParentRelations["FK__ResourceM__Resou__69C6B1F5"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__ResourceM__Resou__398D8EEE"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__ResourceM__Resou__69C6B1F5"]);
                 }
             }
             
@@ -2480,11 +2480,11 @@ namespace StudentManagement {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public StudentModuleRow[] GetStudentModuleRows() {
-                if ((this.Table.ChildRelations["FK__StudentMo__Stude__34C8D9D1"] == null)) {
+                if ((this.Table.ChildRelations["FK__StudentMo__Stude__6501FCD8"] == null)) {
                     return new StudentModuleRow[0];
                 }
                 else {
-                    return ((StudentModuleRow[])(base.GetChildRows(this.Table.ChildRelations["FK__StudentMo__Stude__34C8D9D1"])));
+                    return ((StudentModuleRow[])(base.GetChildRows(this.Table.ChildRelations["FK__StudentMo__Stude__6501FCD8"])));
                 }
             }
         }
@@ -2539,10 +2539,10 @@ namespace StudentManagement {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public ModuleRow ModuleRow {
                 get {
-                    return ((ModuleRow)(this.GetParentRow(this.Table.ParentRelations["FK__StudentMo__Modul__35BCFE0A"])));
+                    return ((ModuleRow)(this.GetParentRow(this.Table.ParentRelations["FK__StudentMo__Modul__65F62111"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__StudentMo__Modul__35BCFE0A"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__StudentMo__Modul__65F62111"]);
                 }
             }
             
@@ -2550,10 +2550,10 @@ namespace StudentManagement {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public StudentRow StudentRow {
                 get {
-                    return ((StudentRow)(this.GetParentRow(this.Table.ParentRelations["FK__StudentMo__Stude__34C8D9D1"])));
+                    return ((StudentRow)(this.GetParentRow(this.Table.ParentRelations["FK__StudentMo__Stude__6501FCD8"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__StudentMo__Stude__34C8D9D1"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__StudentMo__Stude__6501FCD8"]);
                 }
             }
             
@@ -2921,21 +2921,18 @@ SELECT ModuleCode, Name, Description FROM Module WHERE (ModuleCode = @ModuleCode
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::StudentManagement.Properties.Settings.Default.StudentManagementConnectionString;
+            this._connection.ConnectionString = "Data Source=DESKTOP-HK;Initial Catalog=StudentManagement;Integrated Security=True" +
+                "";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ModuleCode, Name, Description FROM dbo.Module";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT ModuleCode, Name, Description FROM dbo.Module";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2960,19 +2957,6 @@ SELECT ModuleCode, Name, Description FROM Module WHERE (ModuleCode = @ModuleCode
             StudentManagementDataSet.ModuleDataTable dataTable = new StudentManagementDataSet.ModuleDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(StudentManagementDataSet.ModuleDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3318,7 +3302,8 @@ SELECT ResourceID, TypeName, URL FROM Resource WHERE (ResourceID = @ResourceID)"
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::StudentManagement.Properties.Settings.Default.StudentManagementConnectionString;
+            this._connection.ConnectionString = "Data Source=DESKTOP-HK;Initial Catalog=StudentManagement;Integrated Security=True" +
+                "";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3652,7 +3637,8 @@ SELECT ResourceID, TypeName, URL FROM Resource WHERE (ResourceID = @ResourceID)"
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::StudentManagement.Properties.Settings.Default.StudentManagementConnectionString;
+            this._connection.ConnectionString = "Data Source=DESKTOP-HK;Initial Catalog=StudentManagement;Integrated Security=True" +
+                "";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3954,7 +3940,8 @@ SELECT StudentNumber, Name, Surname, Image, DOB, Gender, Phone, Address, ModuleC
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::StudentManagement.Properties.Settings.Default.StudentManagementConnectionString;
+            this._connection.ConnectionString = "Data Source=DESKTOP-HK;Initial Catalog=StudentManagement;Integrated Security=True" +
+                "";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4492,7 +4479,8 @@ SELECT StudentNumber, Name, Surname, Image, DOB, Gender, Phone, Address, ModuleC
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::StudentManagement.Properties.Settings.Default.StudentManagementConnectionString;
+            this._connection.ConnectionString = "Data Source=DESKTOP-HK;Initial Catalog=StudentManagement;Integrated Security=True" +
+                "";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4621,7 +4609,8 @@ SELECT StudentNumber, Name, Surname, Image, DOB, Gender, Phone, Address, ModuleC
         private void InitCommandCollection() {
             this._commandCollection = new global::System.Data.IDbCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Connection = new global::System.Data.SqlClient.SqlConnection(global::StudentManagement.Properties.Settings.Default.StudentManagementConnectionString);
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Connection = new global::System.Data.SqlClient.SqlConnection("Data Source=DESKTOP-HK;Initial Catalog=StudentManagement;Integrated Security=True" +
+                    "");
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).CommandText = "dbo.[Create]";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
