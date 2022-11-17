@@ -332,7 +332,7 @@ namespace StudentManagement
             }
         }
 
-        public void sqlQuery(string query)
+        public void SqlQuery(string query)
         {
             sql_connection.Open();
             SqlCommand command = new SqlCommand(query, sql_connection);

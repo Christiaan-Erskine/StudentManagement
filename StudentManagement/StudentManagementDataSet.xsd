@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="StudentManagementConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="StudentManagementConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.StudentManagement.Properties.Settings.GlobalReference.Default.StudentManagementConnectionString" Provider="System.Data.SqlClient" />
+          <Connection ConnectionStringObject="Data Source=DESKTOP-HK;Initial Catalog=StudentManagement;Integrated Security=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="." ParameterPrefix="@" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ModuleTableAdapter" GeneratorDataComponentClassName="ModuleTableAdapter" Name="Module" UserDataComponentName="ModuleTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="StudentManagementConnectionString (Settings)" DbObjectName="StudentManagement.dbo.Module" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="." DbObjectName="StudentManagement.dbo.Module" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Module] WHERE (([ModuleCode] = @Original_ModuleCode) AND ((@IsNull_Name = 1 AND [Name] IS NULL) OR ([Name] = @Original_Name)) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)))</CommandText>
@@ -62,20 +62,11 @@ SELECT ModuleCode, Name, Description FROM Module WHERE (ModuleCode = @ModuleCode
               <Mapping SourceColumn="Name" DataSetColumn="Name" />
               <Mapping SourceColumn="Description" DataSetColumn="Description" />
             </Mappings>
-            <Sources>
-              <DbSource ConnectionRef="StudentManagementConnectionString (Settings)" DbObjectName="StudentManagement.dbo.Module" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT ModuleCode, Name, Description FROM dbo.Module</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </Sources>
+            <Sources />
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ResourceTableAdapter" GeneratorDataComponentClassName="ResourceTableAdapter" Name="Resource" UserDataComponentName="ResourceTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="StudentManagementConnectionString (Settings)" DbObjectName="StudentManagement.dbo.Resource" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="." DbObjectName="StudentManagement.dbo.Resource" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Resource] WHERE (([ResourceID] = @Original_ResourceID) AND ((@IsNull_TypeName = 1 AND [TypeName] IS NULL) OR ([TypeName] = @Original_TypeName)) AND ((@IsNull_URL = 1 AND [URL] IS NULL) OR ([URL] = @Original_URL)))</CommandText>
@@ -131,7 +122,7 @@ SELECT ResourceID, TypeName, URL FROM Resource WHERE (ResourceID = @ResourceID)<
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ResourceModuleTableAdapter" GeneratorDataComponentClassName="ResourceModuleTableAdapter" Name="ResourceModule" UserDataComponentName="ResourceModuleTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="StudentManagementConnectionString (Settings)" DbObjectName="StudentManagement.dbo.ResourceModule" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="." DbObjectName="StudentManagement.dbo.ResourceModule" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [dbo].[ResourceModule] ([ResourceID], [ModuleCode]) VALUES (@ResourceID, @ModuleCode)</CommandText>
@@ -157,7 +148,7 @@ SELECT ResourceID, TypeName, URL FROM Resource WHERE (ResourceID = @ResourceID)<
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="StudentTableAdapter" GeneratorDataComponentClassName="StudentTableAdapter" Name="Student" UserDataComponentName="StudentTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="StudentManagementConnectionString (Settings)" DbObjectName="StudentManagement.dbo.Student" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="." DbObjectName="StudentManagement.dbo.Student" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Student] WHERE (([StudentNumber] = @Original_StudentNumber) AND ((@IsNull_Name = 1 AND [Name] IS NULL) OR ([Name] = @Original_Name)) AND ((@IsNull_Surname = 1 AND [Surname] IS NULL) OR ([Surname] = @Original_Surname)) AND ((@IsNull_Image = 1 AND [Image] IS NULL) OR ([Image] = @Original_Image)) AND ((@IsNull_DOB = 1 AND [DOB] IS NULL) OR ([DOB] = @Original_DOB)) AND ((@IsNull_Gender = 1 AND [Gender] IS NULL) OR ([Gender] = @Original_Gender)) AND ((@IsNull_Phone = 1 AND [Phone] IS NULL) OR ([Phone] = @Original_Phone)) AND ((@IsNull_Address = 1 AND [Address] IS NULL) OR ([Address] = @Original_Address)) AND ((@IsNull_ModuleCode = 1 AND [ModuleCode] IS NULL) OR ([ModuleCode] = @Original_ModuleCode)))</CommandText>
@@ -255,7 +246,7 @@ SELECT StudentNumber, Name, Surname, Image, DOB, Gender, Phone, Address, ModuleC
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="StudentModuleTableAdapter" GeneratorDataComponentClassName="StudentModuleTableAdapter" Name="StudentModule" UserDataComponentName="StudentModuleTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="StudentManagementConnectionString (Settings)" DbObjectName="StudentManagement.dbo.StudentModule" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="." DbObjectName="StudentManagement.dbo.StudentModule" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [dbo].[StudentModule] ([StudentNumber], [ModuleCode]) VALUES (@StudentNumber, @ModuleCode)</CommandText>
@@ -281,7 +272,7 @@ SELECT StudentNumber, Name, Surname, Image, DOB, Gender, Phone, Address, ModuleC
           </TableAdapter>
         </Tables>
         <Sources>
-          <DbSource ConnectionRef="StudentManagementConnectionString (Settings)" DbObjectName="StudentManagement.dbo.[Create]" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="Create" MethodsParameterType="CLR" Modifier="Public" Name="Create" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="Create">
+          <DbSource ConnectionRef="." DbObjectName="StudentManagement.dbo.[Create]" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="Create" MethodsParameterType="CLR" Modifier="Public" Name="Create" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="Create">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.[Create]</CommandText>
@@ -298,27 +289,27 @@ SELECT StudentNumber, Name, Surname, Image, DOB, Gender, Phone, Address, ModuleC
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="StudentManagementDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="StudentManagementDataSet" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="StudentManagementDataSet">
+  <xs:element name="StudentManagementDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="StudentManagementDataSet" msprop:Generator_DataSetName="StudentManagementDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Module" msprop:Generator_RowClassName="ModuleRow" msprop:Generator_RowEvHandlerName="ModuleRowChangeEventHandler" msprop:Generator_RowDeletedName="ModuleRowDeleted" msprop:Generator_RowDeletingName="ModuleRowDeleting" msprop:Generator_RowEvArgName="ModuleRowChangeEvent" msprop:Generator_TablePropName="Module" msprop:Generator_RowChangedName="ModuleRowChanged" msprop:Generator_UserTableName="Module" msprop:Generator_RowChangingName="ModuleRowChanging" msprop:Generator_TableClassName="ModuleDataTable" msprop:Generator_TableVarName="tableModule">
+        <xs:element name="Module" msprop:Generator_RowEvHandlerName="ModuleRowChangeEventHandler" msprop:Generator_RowDeletedName="ModuleRowDeleted" msprop:Generator_RowDeletingName="ModuleRowDeleting" msprop:Generator_RowEvArgName="ModuleRowChangeEvent" msprop:Generator_TablePropName="Module" msprop:Generator_RowChangedName="ModuleRowChanged" msprop:Generator_RowChangingName="ModuleRowChanging" msprop:Generator_TableClassName="ModuleDataTable" msprop:Generator_RowClassName="ModuleRow" msprop:Generator_TableVarName="tableModule" msprop:Generator_UserTableName="Module">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ModuleCode" msprop:Generator_UserColumnName="ModuleCode" msprop:Generator_ColumnPropNameInTable="ModuleCodeColumn" msprop:Generator_ColumnPropNameInRow="ModuleCode" msprop:Generator_ColumnVarNameInTable="columnModuleCode">
+              <xs:element name="ModuleCode" msprop:Generator_ColumnPropNameInRow="ModuleCode" msprop:Generator_ColumnPropNameInTable="ModuleCodeColumn" msprop:Generator_ColumnVarNameInTable="columnModuleCode" msprop:Generator_UserColumnName="ModuleCode">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="25" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Name" msprop:Generator_UserColumnName="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnVarNameInTable="columnName" minOccurs="0">
+              <xs:element name="Name" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_UserColumnName="Name" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Description" msprop:Generator_UserColumnName="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" minOccurs="0">
+              <xs:element name="Description" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_UserColumnName="Description" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="4000" />
@@ -328,18 +319,18 @@ SELECT StudentNumber, Name, Surname, Image, DOB, Gender, Phone, Address, ModuleC
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Resource" msprop:Generator_RowClassName="ResourceRow" msprop:Generator_RowEvHandlerName="ResourceRowChangeEventHandler" msprop:Generator_RowDeletedName="ResourceRowDeleted" msprop:Generator_RowDeletingName="ResourceRowDeleting" msprop:Generator_RowEvArgName="ResourceRowChangeEvent" msprop:Generator_TablePropName="Resource" msprop:Generator_RowChangedName="ResourceRowChanged" msprop:Generator_UserTableName="Resource" msprop:Generator_RowChangingName="ResourceRowChanging" msprop:Generator_TableClassName="ResourceDataTable" msprop:Generator_TableVarName="tableResource">
+        <xs:element name="Resource" msprop:Generator_RowEvHandlerName="ResourceRowChangeEventHandler" msprop:Generator_RowDeletedName="ResourceRowDeleted" msprop:Generator_RowDeletingName="ResourceRowDeleting" msprop:Generator_RowEvArgName="ResourceRowChangeEvent" msprop:Generator_TablePropName="Resource" msprop:Generator_RowChangedName="ResourceRowChanged" msprop:Generator_RowChangingName="ResourceRowChanging" msprop:Generator_TableClassName="ResourceDataTable" msprop:Generator_RowClassName="ResourceRow" msprop:Generator_TableVarName="tableResource" msprop:Generator_UserTableName="Resource">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ResourceID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="ResourceID" msprop:Generator_ColumnPropNameInTable="ResourceIDColumn" msprop:Generator_ColumnPropNameInRow="ResourceID" msprop:Generator_ColumnVarNameInTable="columnResourceID" type="xs:int" />
-              <xs:element name="TypeName" msprop:Generator_UserColumnName="TypeName" msprop:Generator_ColumnPropNameInTable="TypeNameColumn" msprop:Generator_ColumnPropNameInRow="TypeName" msprop:Generator_ColumnVarNameInTable="columnTypeName" minOccurs="0">
+              <xs:element name="ResourceID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="ResourceID" msprop:Generator_ColumnPropNameInTable="ResourceIDColumn" msprop:Generator_ColumnVarNameInTable="columnResourceID" msprop:Generator_UserColumnName="ResourceID" type="xs:int" />
+              <xs:element name="TypeName" msprop:Generator_ColumnPropNameInRow="TypeName" msprop:Generator_ColumnPropNameInTable="TypeNameColumn" msprop:Generator_ColumnVarNameInTable="columnTypeName" msprop:Generator_UserColumnName="TypeName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="URL" msprop:Generator_UserColumnName="URL" msprop:Generator_ColumnPropNameInTable="URLColumn" msprop:Generator_ColumnPropNameInRow="URL" msprop:Generator_ColumnVarNameInTable="columnURL" minOccurs="0">
+              <xs:element name="URL" msprop:Generator_ColumnPropNameInRow="URL" msprop:Generator_ColumnPropNameInTable="URLColumn" msprop:Generator_ColumnVarNameInTable="columnURL" msprop:Generator_UserColumnName="URL" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="4000" />
@@ -349,11 +340,11 @@ SELECT StudentNumber, Name, Surname, Image, DOB, Gender, Phone, Address, ModuleC
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ResourceModule" msprop:Generator_RowClassName="ResourceModuleRow" msprop:Generator_RowEvHandlerName="ResourceModuleRowChangeEventHandler" msprop:Generator_RowDeletedName="ResourceModuleRowDeleted" msprop:Generator_RowDeletingName="ResourceModuleRowDeleting" msprop:Generator_RowEvArgName="ResourceModuleRowChangeEvent" msprop:Generator_TablePropName="ResourceModule" msprop:Generator_RowChangedName="ResourceModuleRowChanged" msprop:Generator_UserTableName="ResourceModule" msprop:Generator_RowChangingName="ResourceModuleRowChanging" msprop:Generator_TableClassName="ResourceModuleDataTable" msprop:Generator_TableVarName="tableResourceModule">
+        <xs:element name="ResourceModule" msprop:Generator_RowEvHandlerName="ResourceModuleRowChangeEventHandler" msprop:Generator_RowDeletedName="ResourceModuleRowDeleted" msprop:Generator_RowDeletingName="ResourceModuleRowDeleting" msprop:Generator_RowEvArgName="ResourceModuleRowChangeEvent" msprop:Generator_TablePropName="ResourceModule" msprop:Generator_RowChangedName="ResourceModuleRowChanged" msprop:Generator_RowChangingName="ResourceModuleRowChanging" msprop:Generator_TableClassName="ResourceModuleDataTable" msprop:Generator_RowClassName="ResourceModuleRow" msprop:Generator_TableVarName="tableResourceModule" msprop:Generator_UserTableName="ResourceModule">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ResourceID" msprop:Generator_UserColumnName="ResourceID" msprop:Generator_ColumnPropNameInTable="ResourceIDColumn" msprop:Generator_ColumnPropNameInRow="ResourceID" msprop:Generator_ColumnVarNameInTable="columnResourceID" type="xs:int" minOccurs="0" />
-              <xs:element name="ModuleCode" msprop:Generator_UserColumnName="ModuleCode" msprop:Generator_ColumnPropNameInTable="ModuleCodeColumn" msprop:Generator_ColumnPropNameInRow="ModuleCode" msprop:Generator_ColumnVarNameInTable="columnModuleCode" minOccurs="0">
+              <xs:element name="ResourceID" msprop:Generator_ColumnPropNameInRow="ResourceID" msprop:Generator_ColumnPropNameInTable="ResourceIDColumn" msprop:Generator_ColumnVarNameInTable="columnResourceID" msprop:Generator_UserColumnName="ResourceID" type="xs:int" minOccurs="0" />
+              <xs:element name="ModuleCode" msprop:Generator_ColumnPropNameInRow="ModuleCode" msprop:Generator_ColumnPropNameInTable="ModuleCodeColumn" msprop:Generator_ColumnVarNameInTable="columnModuleCode" msprop:Generator_UserColumnName="ModuleCode" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="25" />
@@ -363,54 +354,54 @@ SELECT StudentNumber, Name, Surname, Image, DOB, Gender, Phone, Address, ModuleC
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Student" msprop:Generator_RowClassName="StudentRow" msprop:Generator_RowEvHandlerName="StudentRowChangeEventHandler" msprop:Generator_RowDeletedName="StudentRowDeleted" msprop:Generator_RowDeletingName="StudentRowDeleting" msprop:Generator_RowEvArgName="StudentRowChangeEvent" msprop:Generator_TablePropName="Student" msprop:Generator_RowChangedName="StudentRowChanged" msprop:Generator_UserTableName="Student" msprop:Generator_RowChangingName="StudentRowChanging" msprop:Generator_TableClassName="StudentDataTable" msprop:Generator_TableVarName="tableStudent">
+        <xs:element name="Student" msprop:Generator_RowEvHandlerName="StudentRowChangeEventHandler" msprop:Generator_RowDeletedName="StudentRowDeleted" msprop:Generator_RowDeletingName="StudentRowDeleting" msprop:Generator_RowEvArgName="StudentRowChangeEvent" msprop:Generator_TablePropName="Student" msprop:Generator_RowChangedName="StudentRowChanged" msprop:Generator_RowChangingName="StudentRowChanging" msprop:Generator_TableClassName="StudentDataTable" msprop:Generator_RowClassName="StudentRow" msprop:Generator_TableVarName="tableStudent" msprop:Generator_UserTableName="Student">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="StudentNumber" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="StudentNumber" msprop:Generator_ColumnPropNameInTable="StudentNumberColumn" msprop:Generator_ColumnPropNameInRow="StudentNumber" msprop:Generator_ColumnVarNameInTable="columnStudentNumber" type="xs:int" />
-              <xs:element name="Name" msprop:Generator_UserColumnName="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnVarNameInTable="columnName" minOccurs="0">
+              <xs:element name="StudentNumber" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="StudentNumber" msprop:Generator_ColumnPropNameInTable="StudentNumberColumn" msprop:Generator_ColumnVarNameInTable="columnStudentNumber" msprop:Generator_UserColumnName="StudentNumber" type="xs:int" />
+              <xs:element name="Name" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_UserColumnName="Name" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Surname" msprop:Generator_UserColumnName="Surname" msprop:Generator_ColumnPropNameInTable="SurnameColumn" msprop:Generator_ColumnPropNameInRow="Surname" msprop:Generator_ColumnVarNameInTable="columnSurname" minOccurs="0">
+              <xs:element name="Surname" msprop:Generator_ColumnPropNameInRow="Surname" msprop:Generator_ColumnPropNameInTable="SurnameColumn" msprop:Generator_ColumnVarNameInTable="columnSurname" msprop:Generator_UserColumnName="Surname" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Image" msprop:Generator_UserColumnName="Image" msprop:Generator_ColumnPropNameInTable="ImageColumn" msprop:Generator_ColumnPropNameInRow="Image" msprop:Generator_ColumnVarNameInTable="columnImage" minOccurs="0">
+              <xs:element name="Image" msprop:Generator_ColumnPropNameInRow="Image" msprop:Generator_ColumnPropNameInTable="ImageColumn" msprop:Generator_ColumnVarNameInTable="columnImage" msprop:Generator_UserColumnName="Image" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="1000" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="DOB" msprop:Generator_UserColumnName="DOB" msprop:Generator_ColumnPropNameInTable="DOBColumn" msprop:Generator_ColumnPropNameInRow="DOB" msprop:Generator_ColumnVarNameInTable="columnDOB" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="Gender" msprop:Generator_UserColumnName="Gender" msprop:Generator_ColumnPropNameInTable="GenderColumn" msprop:Generator_ColumnPropNameInRow="Gender" msprop:Generator_ColumnVarNameInTable="columnGender" minOccurs="0">
+              <xs:element name="DOB" msprop:Generator_ColumnPropNameInRow="DOB" msprop:Generator_ColumnPropNameInTable="DOBColumn" msprop:Generator_ColumnVarNameInTable="columnDOB" msprop:Generator_UserColumnName="DOB" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Gender" msprop:Generator_ColumnPropNameInRow="Gender" msprop:Generator_ColumnPropNameInTable="GenderColumn" msprop:Generator_ColumnVarNameInTable="columnGender" msprop:Generator_UserColumnName="Gender" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="1" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Phone" msprop:Generator_UserColumnName="Phone" msprop:Generator_ColumnPropNameInTable="PhoneColumn" msprop:Generator_ColumnPropNameInRow="Phone" msprop:Generator_ColumnVarNameInTable="columnPhone" minOccurs="0">
+              <xs:element name="Phone" msprop:Generator_ColumnPropNameInRow="Phone" msprop:Generator_ColumnPropNameInTable="PhoneColumn" msprop:Generator_ColumnVarNameInTable="columnPhone" msprop:Generator_UserColumnName="Phone" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="15" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Address" msprop:Generator_UserColumnName="Address" msprop:Generator_ColumnPropNameInTable="AddressColumn" msprop:Generator_ColumnPropNameInRow="Address" msprop:Generator_ColumnVarNameInTable="columnAddress" minOccurs="0">
+              <xs:element name="Address" msprop:Generator_ColumnPropNameInRow="Address" msprop:Generator_ColumnPropNameInTable="AddressColumn" msprop:Generator_ColumnVarNameInTable="columnAddress" msprop:Generator_UserColumnName="Address" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="200" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="ModuleCode" msprop:Generator_UserColumnName="ModuleCode" msprop:Generator_ColumnPropNameInTable="ModuleCodeColumn" msprop:Generator_ColumnPropNameInRow="ModuleCode" msprop:Generator_ColumnVarNameInTable="columnModuleCode" minOccurs="0">
+              <xs:element name="ModuleCode" msprop:Generator_ColumnPropNameInRow="ModuleCode" msprop:Generator_ColumnPropNameInTable="ModuleCodeColumn" msprop:Generator_ColumnVarNameInTable="columnModuleCode" msprop:Generator_UserColumnName="ModuleCode" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="25" />
@@ -420,11 +411,11 @@ SELECT StudentNumber, Name, Surname, Image, DOB, Gender, Phone, Address, ModuleC
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="StudentModule" msprop:Generator_RowClassName="StudentModuleRow" msprop:Generator_RowEvHandlerName="StudentModuleRowChangeEventHandler" msprop:Generator_RowDeletedName="StudentModuleRowDeleted" msprop:Generator_RowDeletingName="StudentModuleRowDeleting" msprop:Generator_RowEvArgName="StudentModuleRowChangeEvent" msprop:Generator_TablePropName="StudentModule" msprop:Generator_RowChangedName="StudentModuleRowChanged" msprop:Generator_UserTableName="StudentModule" msprop:Generator_RowChangingName="StudentModuleRowChanging" msprop:Generator_TableClassName="StudentModuleDataTable" msprop:Generator_TableVarName="tableStudentModule">
+        <xs:element name="StudentModule" msprop:Generator_RowEvHandlerName="StudentModuleRowChangeEventHandler" msprop:Generator_RowDeletedName="StudentModuleRowDeleted" msprop:Generator_RowDeletingName="StudentModuleRowDeleting" msprop:Generator_RowEvArgName="StudentModuleRowChangeEvent" msprop:Generator_TablePropName="StudentModule" msprop:Generator_RowChangedName="StudentModuleRowChanged" msprop:Generator_RowChangingName="StudentModuleRowChanging" msprop:Generator_TableClassName="StudentModuleDataTable" msprop:Generator_RowClassName="StudentModuleRow" msprop:Generator_TableVarName="tableStudentModule" msprop:Generator_UserTableName="StudentModule">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="StudentNumber" msprop:Generator_UserColumnName="StudentNumber" msprop:Generator_ColumnPropNameInTable="StudentNumberColumn" msprop:Generator_ColumnPropNameInRow="StudentNumber" msprop:Generator_ColumnVarNameInTable="columnStudentNumber" type="xs:int" minOccurs="0" />
-              <xs:element name="ModuleCode" msprop:Generator_UserColumnName="ModuleCode" msprop:Generator_ColumnPropNameInTable="ModuleCodeColumn" msprop:Generator_ColumnPropNameInRow="ModuleCode" msprop:Generator_ColumnVarNameInTable="columnModuleCode" minOccurs="0">
+              <xs:element name="StudentNumber" msprop:Generator_ColumnPropNameInRow="StudentNumber" msprop:Generator_ColumnPropNameInTable="StudentNumberColumn" msprop:Generator_ColumnVarNameInTable="columnStudentNumber" msprop:Generator_UserColumnName="StudentNumber" type="xs:int" minOccurs="0" />
+              <xs:element name="ModuleCode" msprop:Generator_ColumnPropNameInRow="ModuleCode" msprop:Generator_ColumnPropNameInTable="ModuleCodeColumn" msprop:Generator_ColumnVarNameInTable="columnModuleCode" msprop:Generator_UserColumnName="ModuleCode" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="25" />
@@ -451,10 +442,10 @@ SELECT StudentNumber, Name, Surname, Image, DOB, Gender, Phone, Address, ModuleC
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK__ResourceM__Modul__3A81B327" msdata:parent="Module" msdata:child="ResourceModule" msdata:parentkey="ModuleCode" msdata:childkey="ModuleCode" msprop:Generator_UserParentTable="Module" msprop:Generator_UserChildTable="ResourceModule" msprop:Generator_RelationVarName="relationFK__ResourceM__Modul__3A81B327" msprop:Generator_ChildPropName="GetResourceModuleRows" msprop:Generator_UserRelationName="FK__ResourceM__Modul__3A81B327" msprop:Generator_ParentPropName="ModuleRow" />
-      <msdata:Relationship name="FK__ResourceM__Resou__398D8EEE" msdata:parent="Resource" msdata:child="ResourceModule" msdata:parentkey="ResourceID" msdata:childkey="ResourceID" msprop:Generator_UserParentTable="Resource" msprop:Generator_UserChildTable="ResourceModule" msprop:Generator_RelationVarName="relationFK__ResourceM__Resou__398D8EEE" msprop:Generator_ChildPropName="GetResourceModuleRows" msprop:Generator_UserRelationName="FK__ResourceM__Resou__398D8EEE" msprop:Generator_ParentPropName="ResourceRow" />
-      <msdata:Relationship name="FK__StudentMo__Modul__35BCFE0A" msdata:parent="Module" msdata:child="StudentModule" msdata:parentkey="ModuleCode" msdata:childkey="ModuleCode" msprop:Generator_UserParentTable="Module" msprop:Generator_UserChildTable="StudentModule" msprop:Generator_RelationVarName="relationFK__StudentMo__Modul__35BCFE0A" msprop:Generator_ChildPropName="GetStudentModuleRows" msprop:Generator_UserRelationName="FK__StudentMo__Modul__35BCFE0A" msprop:Generator_ParentPropName="ModuleRow" />
-      <msdata:Relationship name="FK__StudentMo__Stude__34C8D9D1" msdata:parent="Student" msdata:child="StudentModule" msdata:parentkey="StudentNumber" msdata:childkey="StudentNumber" msprop:Generator_UserParentTable="Student" msprop:Generator_UserChildTable="StudentModule" msprop:Generator_RelationVarName="relationFK__StudentMo__Stude__34C8D9D1" msprop:Generator_ChildPropName="GetStudentModuleRows" msprop:Generator_UserRelationName="FK__StudentMo__Stude__34C8D9D1" msprop:Generator_ParentPropName="StudentRow" />
+      <msdata:Relationship name="FK__ResourceM__Modul__6ABAD62E" msdata:parent="Module" msdata:child="ResourceModule" msdata:parentkey="ModuleCode" msdata:childkey="ModuleCode" msprop:Generator_UserParentTable="Module" msprop:Generator_UserChildTable="ResourceModule" msprop:Generator_RelationVarName="relationFK__ResourceM__Modul__6ABAD62E" msprop:Generator_ChildPropName="GetResourceModuleRows" msprop:Generator_ParentPropName="ModuleRow" msprop:Generator_UserRelationName="FK__ResourceM__Modul__6ABAD62E" />
+      <msdata:Relationship name="FK__ResourceM__Resou__69C6B1F5" msdata:parent="Resource" msdata:child="ResourceModule" msdata:parentkey="ResourceID" msdata:childkey="ResourceID" msprop:Generator_UserParentTable="Resource" msprop:Generator_UserChildTable="ResourceModule" msprop:Generator_RelationVarName="relationFK__ResourceM__Resou__69C6B1F5" msprop:Generator_ChildPropName="GetResourceModuleRows" msprop:Generator_ParentPropName="ResourceRow" msprop:Generator_UserRelationName="FK__ResourceM__Resou__69C6B1F5" />
+      <msdata:Relationship name="FK__StudentMo__Modul__65F62111" msdata:parent="Module" msdata:child="StudentModule" msdata:parentkey="ModuleCode" msdata:childkey="ModuleCode" msprop:Generator_UserParentTable="Module" msprop:Generator_UserChildTable="StudentModule" msprop:Generator_RelationVarName="relationFK__StudentMo__Modul__65F62111" msprop:Generator_ChildPropName="GetStudentModuleRows" msprop:Generator_ParentPropName="ModuleRow" msprop:Generator_UserRelationName="FK__StudentMo__Modul__65F62111" />
+      <msdata:Relationship name="FK__StudentMo__Stude__6501FCD8" msdata:parent="Student" msdata:child="StudentModule" msdata:parentkey="StudentNumber" msdata:childkey="StudentNumber" msprop:Generator_UserParentTable="Student" msprop:Generator_UserChildTable="StudentModule" msprop:Generator_RelationVarName="relationFK__StudentMo__Stude__6501FCD8" msprop:Generator_ChildPropName="GetStudentModuleRows" msprop:Generator_ParentPropName="StudentRow" msprop:Generator_UserRelationName="FK__StudentMo__Stude__6501FCD8" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
